@@ -2,6 +2,7 @@ package org.example.Domain.user;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.dto.UserDTO;
 import java.math.BigDecimal;
 
 @Entity(name = "users")
@@ -30,6 +31,15 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
+    public User(UserDTO data){
+        this.firstName = data.firstName();
+        this.secondName = data.secondName();
+        this.document = data.document();
+        this.email = data.email();
+        this.balance = data.balance();
+        this.password = data.password();
+        this.userType = data.userType();
+    }
 
 
 }
