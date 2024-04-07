@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class User {
 
@@ -40,6 +41,5 @@ public class User {
         this.password = data.password();
         this.userType = data.userType();
     }
-
 
 }
